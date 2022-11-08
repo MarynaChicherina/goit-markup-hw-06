@@ -639,7 +639,7 @@ h1, h2, h3, p, strong {
 .footer-third {
     width: 570px;
     margin-left: 93px;
-    outline: 1px solid tomato;
+
 }
 .footer-form {
     display: flex;
