@@ -645,18 +645,23 @@ h1, h2, h3, p, strong {
     display: flex;
     height: 50px;
 }
-.footer-form input {
+.form-input {
     display: flex;
     margin-right: auto;
     width: 100%;
     padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+    color: var(--primary-white-color);
 
     background-color: transparent;
 }
+.form-input:focus,
+.form-input:hover {
+    border-color: var(--accent-color);
 
-.footer-form input::placeholder {
+}
+.form-input::placeholder {
     font-size: 16px;
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
