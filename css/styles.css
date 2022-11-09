@@ -226,7 +226,6 @@ h1, h2, h3, p, strong {
 
     width: 528px;
     height: 581px;
-    padding: 8px;
 
     background-color: var(--primary-white-color);
     transition: transform 250ms var(--animation-function);
@@ -240,6 +239,8 @@ h1, h2, h3, p, strong {
     height: 30px;
     padding: 0;
     cursor: pointer;
+    margin-right: 8px;
+    margin-top: 8px;
 
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -258,13 +259,10 @@ h1, h2, h3, p, strong {
 }
 /*форма модального вікна*/
 .modal-form {
-    position: absolute;
     width: 448px;
+    position: absolute;
     top: 40px;
-    left: 41px;
-    z-index: 4;
-
-    outline: 1px solid tomato;
+    left: 40px;
 }
 .form-title {
     margin-bottom: 12px;
@@ -273,31 +271,51 @@ h1, h2, h3, p, strong {
     color: var(--title-text-color);
 }
 .form-field {
+    position: relative;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    
-    outline: 1px solid blue;
 }
 .form-field input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    padding: 11px 12px;
+    padding: 11px 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: border-color 250ms var(--animation-function);
 
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
+}
+.form-field input:focus,
+.form-field input:hover {
+    border-color: var(--accent-color);
+}
 
+.icon-form {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 11px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    transition: fill 250ms var(--animation-function);
+
+    fill: var(--title-text-color);
+}
+.input-form:focus + .icon-form,
+.input-form:hover + .icon-form {
+    fill: var(--accent-color);
 }
 .form-textarea {
     margin-bottom: 20px;
     
     display: flex;
     flex-direction: column;
-
-    outline: 1px solid teal;
-    
 }
 .form-textarea textarea {
     margin: 0;
@@ -305,11 +323,11 @@ h1, h2, h3, p, strong {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
+    transition: border-color 250ms var(--animation-function);
 
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
-
 }
 .form-textarea textarea::placeholder {
     color: rgba(117, 117, 117, 0.5);
@@ -318,6 +336,10 @@ h1, h2, h3, p, strong {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
+}
+.form-textarea textarea:focus,
+.form-textarea textarea:hover {
+    border-color: var(--accent-color);
 }
 .form-label {
     text-align: left;
@@ -328,14 +350,59 @@ h1, h2, h3, p, strong {
 
     color: var(--primary-text-color);
 }
+.form-policy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+.checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    position: absolute;
+}
+.icon-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+
+    background-color: var(--primary-white-color);
+    fill: rgba(33, 33, 33, 1);
+    transition: fill 250ms var(--animation-function);  
+}
+.checkbox:checked + .icon-checkbox {
+    fill: var(--accent-color);
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    background-image: url(../images/icon\ check.svg);
+    background-size: contain;
+    background-origin: border-box;
+
+
+}
+.form-policy .policy-label {  
+    margin-left: 7px;
+    font-size: 14px;
+    line-height: 1.71;
+
+}
+
+.form-policy a {
+    color: var(--accent-color);
+}
 .modal-form > .button-form {
     text-align: center;
     width: 200px;
     margin-left: 10px;
     font-weight: 700;
     line-height: 1.88;
+    transition: box-shadow 250ms var(--animation-function);
     
     border: 1px solid transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 10px;
 }
 
