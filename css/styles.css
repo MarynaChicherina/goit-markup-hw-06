@@ -350,6 +350,7 @@ h1, h2, h3, p, strong {
 
     color: var(--primary-text-color);
 }
+/*оформлення чекбоксу*/
 .form-policy {
     display: flex;
     align-items: center;
@@ -366,6 +367,7 @@ h1, h2, h3, p, strong {
 }
 .icon-checkbox {
     display: inline-block;
+
     width: 16px;
     height: 15px;
 
