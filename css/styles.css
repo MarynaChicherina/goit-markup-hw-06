@@ -283,9 +283,9 @@ h1, h2, h3, p, strong {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     margin: 0;
     padding: 11px 40px;
+    outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color 250ms var(--animation-function);
@@ -325,8 +325,8 @@ h1, h2, h3, p, strong {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
-    cursor: pointer;
     transition: border-color 250ms var(--animation-function);
+    outline: none;
 
     font-size: 12px;
     line-height: 1.16;
@@ -812,6 +812,7 @@ h1, h2, h3, p, strong {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     color: var(--primary-white-color);
+    outline: none;
 
     background-color: transparent;
 }
